@@ -1,12 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int n = 4;
+int factorial(int n) {
     int fact = 1;
-    for (int i = 1; i <= n; i++) {
+    for(int i = 1; i <= n; i++) {
         fact *= i;
     }
-    cout << "Factorial = " << fact ;
+    return fact;
+}
+
+int main() {
+    int num;
+    cout << "Enter number: ";
+    cin >> num;
+    cout << "Factorial = " << factorial(num) << endl;
     return 0;
 }
